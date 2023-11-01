@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Apple
+  - Trap
+  - Banana
+  - Cherry
+  - Kiwi
+  - Melon
+  - Orange
+  - Pineapple
+  - Strawberry
   layers:
   - Default
   - TransparentFX
