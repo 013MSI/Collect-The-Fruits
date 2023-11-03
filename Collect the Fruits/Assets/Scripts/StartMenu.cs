@@ -9,4 +9,14 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void Settings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+
+    public void Characters()
+    {
+        SceneManager.LoadScene("Characters");
+    }
 }
