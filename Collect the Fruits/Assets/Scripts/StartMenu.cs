@@ -19,4 +19,9 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Characters");
     }
+
+    public void Levels()
+    {
+        SceneManager.LoadScene("Levels");
+    }
 }
