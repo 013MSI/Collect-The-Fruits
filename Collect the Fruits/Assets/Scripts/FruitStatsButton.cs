@@ -9,7 +9,7 @@ public class FruitStatsButton : MonoBehaviour
 
     private void Start()
     {
-        UpdateButtonText();
+        fruitStatButtonText.text = (PlayerPrefs.GetInt("StatsState")==1) ? "X" : "O";
     }
 
     public void FruitStats()
@@ -20,10 +20,24 @@ public class FruitStatsButton : MonoBehaviour
 
     private void UpdateButtonText()
     {
-        fruitStatButtonText.text = StatsManager.Instance.IsTextActive(fruitStatButtonText) ? "X" : "O";
+        Debug.Log(PlayerPrefs.GetInt("StatsState"));
+
+        int value = 0;
+        if ((PlayerPrefs.GetInt("StatsState")) == 0)
+        {
+            value = 1;
+        }
+        else if ((PlayerPrefs.GetInt("StatsState")) == 1)
+        {
+            value = 0;
+        }
+
+        Debug.Log(value);
 
         // Save the state in PlayerPrefs
-        PlayerPrefs.SetInt("StatsState", StatsManager.Instance.IsTextActive() ? 1 : 0);
-        PlayerPrefs.Save(); // Save PlayerPrefs immediately
+        PlayerPrefs.SetInt("StatsState", value);
+        //PlayerPrefs.Save(); // Save PlayerPrefs immediately
+
+        fruitStatButtonText.text = (PlayerPrefs.GetInt("StatsState")==1) ? "X" : "O";
     }
 }

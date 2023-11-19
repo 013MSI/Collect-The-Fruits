@@ -44,8 +44,8 @@ public class StatsManager : MonoBehaviour
             }
         }
 
-        PlayerPrefs.SetInt("StatsState", IsTextActive() ? 1 : 0);
-        PlayerPrefs.Save(); // Save PlayerPrefs immediately
+        //PlayerPrefs.SetInt("StatsState", IsTextActive() ? 1 : 0);
+        //PlayerPrefs.Save(); // Save PlayerPrefs immediately
     }
 
     // Check if any text source is active

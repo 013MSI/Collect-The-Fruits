@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     private string previousSceneName;
     private int selectedColorIndex = 0;
+
+    public Color[] colors;
+
     public static GameManager Instance
     {
         get

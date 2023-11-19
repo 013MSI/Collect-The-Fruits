@@ -8,7 +8,6 @@ public class UIColorButton : MonoBehaviour
     public static UIColorButton Instance { get; private set; } // Singleton instance
 
     public TMP_Text buttonText; // Reference to the TextMeshPro component on the button
-    public Color[] colors; // Add the colors you want to cycle through in the Inspector
     private int currentColorIndex = 0;
 
     private void Awake()
@@ -26,7 +25,7 @@ public class UIColorButton : MonoBehaviour
     private void Start()
     {
         // Load the selected color index from PlayerPrefs
-        currentColorIndex = PlayerPrefs.GetInt("SelectedColorIndex", 0);
+        currentColorIndex = PlayerPrefs.GetInt("SelectedColorIndex");
 
         ApplyColor();
         UpdateButtonText();
@@ -34,16 +33,13 @@ public class UIColorButton : MonoBehaviour
 
     public void ChangeColor()
     {
-        currentColorIndex = (currentColorIndex + 1) % colors.Length;
+        currentColorIndex = (currentColorIndex + 1) % GameManager.Instance.colors.Length;
         ApplyColor();
         UpdateButtonText();
 
         // Save the selected color index to PlayerPrefs
         PlayerPrefs.SetInt("SelectedColorIndex", currentColorIndex);
-        PlayerPrefs.Save();
-
-        // Update the color of text elements in the UIManager
-        UIManager.Instance.UpdateUIColor();
+        //PlayerPrefs.Save();
     }
 
     private void ApplyColor()
@@ -51,7 +47,7 @@ public class UIColorButton : MonoBehaviour
         TMP_Text[] textElements = FindObjectsOfType<TMP_Text>();
         foreach (TMP_Text textElement in textElements)
         {
-            textElement.color = colors[currentColorIndex];
+            textElement.color = GameManager.Instance.colors[currentColorIndex];
         }
     }
 
