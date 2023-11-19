@@ -20,8 +20,19 @@ public class Finish : MonoBehaviour
         {
             finishSound.Play();
             levelCompleted = true;
+            UnlockNextLevel();
             Invoke("CompleteLevel", 2f);
         }
+    }
+
+    private void UnlockNextLevel()
+    {
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        int nextLevel = currentLevel + 1;
+
+        // Save the information that the next level is unlocked
+        PlayerPrefs.SetInt("Level" + nextLevel + "Unlocked", 1);
+        PlayerPrefs.Save();
     }
 
     private void CompleteLevel()
