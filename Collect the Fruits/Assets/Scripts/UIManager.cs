@@ -24,7 +24,6 @@ public class UIManager : MonoBehaviour
         {
             foreach (TMP_Text textElement in textElements)
             {
-                Debug.Log(selectedColorIndex);
                 textElement.color = GameManager.Instance.colors[selectedColorIndex];
             }
         }

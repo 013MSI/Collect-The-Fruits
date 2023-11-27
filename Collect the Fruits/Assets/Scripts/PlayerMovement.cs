@@ -19,6 +19,12 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private AudioSource jumpSoundEffect;
 
+    
+    public RuntimeAnimatorController ninjaFrogDefaultAnimatorController;
+    public RuntimeAnimatorController pinkManOverrideController;
+    public RuntimeAnimatorController maskDudeOverrideController;
+    public RuntimeAnimatorController virtualGuyOverrideController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
+        ChangePlayerAnimator();
     }
 
     // Update is called once per frame
@@ -77,5 +85,43 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
+    }
+
+    
+    public void ChangePlayerAnimator()
+    {
+        string animationOverrideKey = PlayerPrefs.GetString("AnimationOverrideKey");
+        
+        GameObject player = GameObject.FindGameObjectWithTag("Player"); 
+
+        if (player != null)
+        {
+            if (anim != null)
+            {
+                switch (animationOverrideKey)
+            {
+                case "pinkMan":
+                    anim.runtimeAnimatorController = pinkManOverrideController;
+                    break;
+                case "maskDude":
+                    anim.runtimeAnimatorController = maskDudeOverrideController;
+                    break;
+                case "virtualGuy":
+                    anim.runtimeAnimatorController = virtualGuyOverrideController;
+                    break;
+                default:
+                    anim.runtimeAnimatorController = ninjaFrogDefaultAnimatorController;
+                    break;
+                }
+            }
+            else
+            {
+                Debug.LogError("Player character does not have an Animator component.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Player character not found in the scene. Make sure it has the correct tag.");
+        }
     }
 }

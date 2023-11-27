@@ -39,7 +39,6 @@ public class UIColorButton : MonoBehaviour
 
         // Save the selected color index to PlayerPrefs
         PlayerPrefs.SetInt("SelectedColorIndex", currentColorIndex);
-        //PlayerPrefs.Save();
     }
 
     private void ApplyColor()

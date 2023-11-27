@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 5098636323332860440}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,6 +158,10 @@ MonoBehaviour:
   moveSpeed: 7
   jumpForce: 14
   jumpSoundEffect: {fileID: 5098636323332860447}
+  ninjaFrogDefaultAnimatorController: {fileID: 9100000, guid: 54767df9b1cd2c847ac0af7209992b24, type: 2}
+  pinkManOverrideController: {fileID: 22100000, guid: 499b5a9f992d2684294675de34305ffd, type: 2}
+  maskDudeOverrideController: {fileID: 22100000, guid: 6c7d0744407fc294ba8e4e0b225bf541, type: 2}
+  virtualGuyOverrideController: {fileID: 22100000, guid: 7cd3d26af9d7cf445b752f0a9cda1b51, type: 2}
 --- !u!95 &5098636323332860444
 Animator:
   serializedVersion: 4
@@ -190,7 +194,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af4b2ebf40e456448f2bffd927cbcb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsText: {fileID: 0}
   applesText: {fileID: 0}
+  bananasText: {fileID: 0}
+  cherriesText: {fileID: 0}
+  kiwisText: {fileID: 0}
+  melonsText: {fileID: 0}
+  orangesText: {fileID: 0}
+  pineapplesText: {fileID: 0}
+  strawberriesText: {fileID: 0}
   collectSoundEffect: {fileID: 5098636323332860441}
 --- !u!114 &5098636323332860446
 MonoBehaviour:

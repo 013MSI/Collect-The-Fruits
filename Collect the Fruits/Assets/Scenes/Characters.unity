@@ -1182,6 +1182,7 @@ GameObject:
   - component: {fileID: 238500857}
   - component: {fileID: 238500856}
   - component: {fileID: 238500855}
+  - component: {fileID: 238500858}
   m_Layer: 5
   m_Name: Man
   m_TagString: Untagged
@@ -1252,7 +1253,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 238500856}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 238500858}
+        m_TargetAssemblyTypeName: ChracterChooser, Assembly-CSharp
+        m_MethodName: OnClickButton1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &238500856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1291,6 +1304,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238500853}
   m_CullTransparentMesh: 1
+--- !u!114 &238500858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238500853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbd69348c9b7be4eb38478888ca4b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ninjaFrogDefaultAnimatorController: {fileID: 9100000, guid: 54767df9b1cd2c847ac0af7209992b24, type: 2}
+  pinkManOverrideController1: {fileID: 22100000, guid: 499b5a9f992d2684294675de34305ffd, type: 2}
+  maskDudeOverrideController2: {fileID: 22100000, guid: 6c7d0744407fc294ba8e4e0b225bf541, type: 2}
+  virtualGuyOverrideController3: {fileID: 22100000, guid: 7cd3d26af9d7cf445b752f0a9cda1b51, type: 2}
 --- !u!1 &280783090
 GameObject:
   m_ObjectHideFlags: 0
@@ -5941,6 +5970,7 @@ GameObject:
   - component: {fileID: 1165606780}
   - component: {fileID: 1165606779}
   - component: {fileID: 1165606778}
+  - component: {fileID: 1165606781}
   m_Layer: 5
   m_Name: Guy
   m_TagString: Untagged
@@ -6011,7 +6041,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1165606779}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1165606781}
+        m_TargetAssemblyTypeName: ChracterChooser, Assembly-CSharp
+        m_MethodName: OnClickButton3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1165606779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6050,6 +6092,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165606776}
   m_CullTransparentMesh: 1
+--- !u!114 &1165606781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165606776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbd69348c9b7be4eb38478888ca4b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ninjaFrogDefaultAnimatorController: {fileID: 9100000, guid: 54767df9b1cd2c847ac0af7209992b24, type: 2}
+  pinkManOverrideController1: {fileID: 22100000, guid: 499b5a9f992d2684294675de34305ffd, type: 2}
+  maskDudeOverrideController2: {fileID: 22100000, guid: 6c7d0744407fc294ba8e4e0b225bf541, type: 2}
+  virtualGuyOverrideController3: {fileID: 22100000, guid: 7cd3d26af9d7cf445b752f0a9cda1b51, type: 2}
 --- !u!1 &1189663532
 GameObject:
   m_ObjectHideFlags: 0
@@ -6442,6 +6500,7 @@ GameObject:
   - component: {fileID: 1297976714}
   - component: {fileID: 1297976713}
   - component: {fileID: 1297976712}
+  - component: {fileID: 1297976715}
   m_Layer: 5
   m_Name: Frog
   m_TagString: Untagged
@@ -6512,7 +6571,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1297976713}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1297976715}
+        m_TargetAssemblyTypeName: ChracterChooser, Assembly-CSharp
+        m_MethodName: OnClickButton0
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1297976713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6551,6 +6622,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297976710}
   m_CullTransparentMesh: 1
+--- !u!114 &1297976715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297976710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbd69348c9b7be4eb38478888ca4b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ninjaFrogDefaultAnimatorController: {fileID: 9100000, guid: 54767df9b1cd2c847ac0af7209992b24, type: 2}
+  pinkManOverrideController1: {fileID: 22100000, guid: 499b5a9f992d2684294675de34305ffd, type: 2}
+  maskDudeOverrideController2: {fileID: 22100000, guid: 6c7d0744407fc294ba8e4e0b225bf541, type: 2}
+  virtualGuyOverrideController3: {fileID: 22100000, guid: 7cd3d26af9d7cf445b752f0a9cda1b51, type: 2}
 --- !u!1 &1327929234
 GameObject:
   m_ObjectHideFlags: 0
@@ -9705,6 +9792,7 @@ GameObject:
   - component: {fileID: 1918312239}
   - component: {fileID: 1918312238}
   - component: {fileID: 1918312237}
+  - component: {fileID: 1918312240}
   m_Layer: 5
   m_Name: Dude
   m_TagString: Untagged
@@ -9775,7 +9863,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1918312238}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1918312240}
+        m_TargetAssemblyTypeName: ChracterChooser, Assembly-CSharp
+        m_MethodName: OnClickButton2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1918312238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9814,6 +9914,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918312235}
   m_CullTransparentMesh: 1
+--- !u!114 &1918312240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918312235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbd69348c9b7be4eb38478888ca4b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ninjaFrogDefaultAnimatorController: {fileID: 9100000, guid: 54767df9b1cd2c847ac0af7209992b24, type: 2}
+  pinkManOverrideController1: {fileID: 22100000, guid: 499b5a9f992d2684294675de34305ffd, type: 2}
+  maskDudeOverrideController2: {fileID: 22100000, guid: 6c7d0744407fc294ba8e4e0b225bf541, type: 2}
+  virtualGuyOverrideController3: {fileID: 22100000, guid: 7cd3d26af9d7cf445b752f0a9cda1b51, type: 2}
 --- !u!1 &1947977888
 GameObject:
   m_ObjectHideFlags: 0
