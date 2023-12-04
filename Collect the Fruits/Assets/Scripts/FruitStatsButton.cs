@@ -1,24 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class FruitStatsButton : MonoBehaviour
 {
-    [SerializeField] private TMP_Text fruitStatButtonText;
+    [SerializeField] private Image fruitStatsButtonImage;
+    [SerializeField] private Sprite fruitStatsOnSprite;
+    [SerializeField] private Sprite fruitStatsOffSprite;
 
     private void Start()
     {
-        fruitStatButtonText.text = (PlayerPrefs.GetInt("StatsState") == 1) ? "X" : "O";
+        fruitStatsButtonImage.sprite = (PlayerPrefs.GetInt("StatsState") == 1) ? fruitStatsOnSprite : fruitStatsOffSprite;
     }
 
     public void FruitStats()
     {
         StatsManager.Instance.ToggleText();
-        UpdateButtonText();
+        UpdateButtonImage();
     }
 
-    private void UpdateButtonText()
+    private void UpdateButtonImage()
     {
         int value = 0;
         if ((PlayerPrefs.GetInt("StatsState")) == 0)
@@ -34,6 +36,6 @@ public class FruitStatsButton : MonoBehaviour
         PlayerPrefs.SetInt("StatsState", value);
         //PlayerPrefs.Save(); // Save PlayerPrefs immediately
 
-        fruitStatButtonText.text = (PlayerPrefs.GetInt("StatsState") == 1) ? "X" : "O";
+        fruitStatsButtonImage.sprite = (PlayerPrefs.GetInt("StatsState") == 1) ? fruitStatsOnSprite : fruitStatsOffSprite;
     }
 }

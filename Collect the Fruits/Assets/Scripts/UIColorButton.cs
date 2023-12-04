@@ -43,7 +43,7 @@ public class UIColorButton : MonoBehaviour
 
     private void ApplyColor()
     {
-        TMP_Text[] textElements = FindObjectsOfType<TMP_Text>();
+        TMP_Text[] textElements = FindObjectsOfType<TMP_Text>(true);
         foreach (TMP_Text textElement in textElements)
         {
             textElement.color = GameManager.Instance.colors[currentColorIndex];

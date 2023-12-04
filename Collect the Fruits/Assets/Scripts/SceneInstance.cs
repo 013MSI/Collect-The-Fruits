@@ -12,6 +12,7 @@ public class SceneInstance : MonoBehaviour
     void Start()
     {
         textElements = FindObjectsOfType<TMP_Text>();
+        GameManager.Instance.isPlaying = true;
 
         foreach (var textObject in textSources)
         {

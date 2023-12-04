@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
             // Get all the TextMeshPro elements in the scene
-            textElements = FindObjectsOfType<TMP_Text>();
+            textElements = FindObjectsOfType<TMP_Text>(true);
 
             // Set the initial color based on the saved index from PlayerPrefs
             UpdateUIColor();

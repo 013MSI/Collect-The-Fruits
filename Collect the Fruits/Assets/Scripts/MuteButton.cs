@@ -1,15 +1,17 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class MuteButton : MonoBehaviour
 {
-    [SerializeField] private TMP_Text bgMusicButtonText;
+    [SerializeField] private Image bgMusicButtonImage;
+    [SerializeField] private Sprite soundOnSprite;
+    [SerializeField] private Sprite soundOffSprite;
     [SerializeField] private AudioSource sceneAudioSource; // Reference to the audio source in the scene
 
      private void Start()
     {
-        // Update button text based on PlayerPrefs data
-        bgMusicButtonText.text = PlayerPrefs.GetInt("MuteState", 0) == 1 ? "X" : "O";
+        // Update button image based on PlayerPrefs data
+        bgMusicButtonImage.sprite = PlayerPrefs.GetInt("MuteState", 0) == 1 ? soundOffSprite : soundOnSprite;
 
         // Set the initial state of the audio source in the scene
         sceneAudioSource.mute = PlayerPrefs.GetInt("MuteState", 0) == 1;
@@ -18,7 +20,7 @@ public class MuteButton : MonoBehaviour
     public void BGMusic()
     {
         AudioManager.Instance.ToggleMute(); // Use the AudioManager to control the global audio source
-        bgMusicButtonText.text = AudioManager.Instance.audioSource.mute ? "X" : "O";
+        bgMusicButtonImage.sprite = AudioManager.Instance.audioSource.mute ? soundOffSprite : soundOnSprite;
 
         // Toggle the mute state of the audio source in the scene
         sceneAudioSource.mute = AudioManager.Instance.audioSource.mute;

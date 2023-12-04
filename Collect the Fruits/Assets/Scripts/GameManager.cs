@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public Color[] colors;
 
+    public bool isPlaying;
+
     public static GameManager Instance
     {
         get

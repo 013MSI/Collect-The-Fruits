@@ -7,13 +7,24 @@ public class ResumeButton : MonoBehaviour
     {
         string previousSceneName = GameManager.Instance.GetPreviousSceneName();
 
-        if (!string.IsNullOrEmpty(previousSceneName))
+        if(GameManager.Instance.isPlaying == false)
         {
-            SceneManager.LoadScene(previousSceneName);
+            if (!string.IsNullOrEmpty(previousSceneName))
+            {
+                //SceneManager.UnloadSceneAsync("Settings");
+                SceneManager.LoadScene(previousSceneName);
+            }
+            else
+            {
+                Debug.LogError("No previous scene name found. Unable to resume.");
+            }
         }
         else
         {
-            Debug.LogError("No previous scene name found. Unable to resume.");
+            Time.timeScale = 1f;
+        
+            SceneManager.UnloadSceneAsync("Settings");
         }
+        
     }
 }
