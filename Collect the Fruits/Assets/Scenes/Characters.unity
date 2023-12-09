@@ -1316,10 +1316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbd69348c9b7be4eb38478888ca4b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ninjaFrogDefaultAnimatorController: {fileID: 9100000, guid: 54767df9b1cd2c847ac0af7209992b24, type: 2}
-  pinkManOverrideController1: {fileID: 22100000, guid: 499b5a9f992d2684294675de34305ffd, type: 2}
-  maskDudeOverrideController2: {fileID: 22100000, guid: 6c7d0744407fc294ba8e4e0b225bf541, type: 2}
-  virtualGuyOverrideController3: {fileID: 22100000, guid: 7cd3d26af9d7cf445b752f0a9cda1b51, type: 2}
 --- !u!1 &280783090
 GameObject:
   m_ObjectHideFlags: 0
@@ -6104,10 +6100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbd69348c9b7be4eb38478888ca4b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ninjaFrogDefaultAnimatorController: {fileID: 9100000, guid: 54767df9b1cd2c847ac0af7209992b24, type: 2}
-  pinkManOverrideController1: {fileID: 22100000, guid: 499b5a9f992d2684294675de34305ffd, type: 2}
-  maskDudeOverrideController2: {fileID: 22100000, guid: 6c7d0744407fc294ba8e4e0b225bf541, type: 2}
-  virtualGuyOverrideController3: {fileID: 22100000, guid: 7cd3d26af9d7cf445b752f0a9cda1b51, type: 2}
 --- !u!1 &1189663532
 GameObject:
   m_ObjectHideFlags: 0
@@ -6634,10 +6626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbd69348c9b7be4eb38478888ca4b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ninjaFrogDefaultAnimatorController: {fileID: 9100000, guid: 54767df9b1cd2c847ac0af7209992b24, type: 2}
-  pinkManOverrideController1: {fileID: 22100000, guid: 499b5a9f992d2684294675de34305ffd, type: 2}
-  maskDudeOverrideController2: {fileID: 22100000, guid: 6c7d0744407fc294ba8e4e0b225bf541, type: 2}
-  virtualGuyOverrideController3: {fileID: 22100000, guid: 7cd3d26af9d7cf445b752f0a9cda1b51, type: 2}
 --- !u!1 &1327929234
 GameObject:
   m_ObjectHideFlags: 0
@@ -9926,10 +9914,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbd69348c9b7be4eb38478888ca4b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ninjaFrogDefaultAnimatorController: {fileID: 9100000, guid: 54767df9b1cd2c847ac0af7209992b24, type: 2}
-  pinkManOverrideController1: {fileID: 22100000, guid: 499b5a9f992d2684294675de34305ffd, type: 2}
-  maskDudeOverrideController2: {fileID: 22100000, guid: 6c7d0744407fc294ba8e4e0b225bf541, type: 2}
-  virtualGuyOverrideController3: {fileID: 22100000, guid: 7cd3d26af9d7cf445b752f0a9cda1b51, type: 2}
 --- !u!1 &1947977888
 GameObject:
   m_ObjectHideFlags: 0
@@ -10435,12 +10419,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
