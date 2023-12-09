@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     public Color[] colors;
 
     public bool isPlaying;
+    public bool pausedFromGame;
 
     public static GameManager Instance
     {
@@ -36,7 +38,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
     public void SetPreviousSceneName(string sceneName)
     {
         previousSceneName = sceneName;

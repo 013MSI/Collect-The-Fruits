@@ -13,6 +13,7 @@ TagManager:
   - Orange
   - Pineapple
   - Strawberry
+  - EventSystem
   layers:
   - Default
   - TransparentFX

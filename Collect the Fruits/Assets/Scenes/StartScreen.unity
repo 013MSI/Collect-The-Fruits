@@ -1392,7 +1392,7 @@ GameObject:
   - component: {fileID: 280783091}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: EventSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5655,6 +5655,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1681015315215344243, guid: a1f5a6ceb19f6364d9b800743c1268fb, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7140612500118365976, guid: a1f5a6ceb19f6364d9b800743c1268fb, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -8416,6 +8420,7 @@ MonoBehaviour:
   - {r: 0.4240121, g: 0.7830189, b: 0.48326567, a: 1}
   - {r: 0.44770378, g: 0.772275, b: 0.9056604, a: 1}
   - {r: 0.7590903, g: 0.46258453, b: 0.8396226, a: 1}
+  isPlaying: 0
 --- !u!4 &1586400261
 Transform:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; } // Singleton instance
     public AudioSource audioSource;
+    private AudioClip savedAudioClip;
+    private float savedTime;
 
     private void Awake()
     {
@@ -30,5 +32,17 @@ public class AudioManager : MonoBehaviour
         audioSource.mute = !audioSource.mute;
         PlayerPrefs.SetInt("MuteState", audioSource.mute ? 1 : 0);
         PlayerPrefs.Save(); // Save PlayerPrefs immediately
+    }
+
+    public void SaveClip()
+    {
+        savedAudioClip = audioSource.clip;
+        savedTime = audioSource.time;
+    }
+
+    public void LoadClip()
+    {
+        audioSource.clip = savedAudioClip;
+        audioSource.time = savedTime;
     }
 }

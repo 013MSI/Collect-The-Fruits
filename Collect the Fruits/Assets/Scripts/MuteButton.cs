@@ -23,7 +23,7 @@ public class MuteButton : MonoBehaviour
         bgMusicButtonImage.sprite = AudioManager.Instance.audioSource.mute ? soundOffSprite : soundOnSprite;
 
         // Toggle the mute state of the audio source in the scene
-        sceneAudioSource.mute = AudioManager.Instance.audioSource.mute;
+        //sceneAudioSource.mute = AudioManager.Instance.audioSource.mute;
 
         // Save the mute state in PlayerPrefs
         PlayerPrefs.SetInt("MuteState", AudioManager.Instance.audioSource.mute ? 1 : 0);

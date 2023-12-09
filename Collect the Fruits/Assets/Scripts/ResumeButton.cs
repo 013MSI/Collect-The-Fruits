@@ -11,7 +11,6 @@ public class ResumeButton : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(previousSceneName))
             {
-                //SceneManager.UnloadSceneAsync("Settings");
                 SceneManager.LoadScene(previousSceneName);
             }
             else
@@ -22,8 +21,10 @@ public class ResumeButton : MonoBehaviour
         else
         {
             Time.timeScale = 1f;
-        
+            AudioManager.Instance.LoadClip();
+            AudioManager.Instance.audioSource.Play();
             SceneManager.UnloadSceneAsync("Settings");
+            GameManager.Instance.pausedFromGame = false;
         }
         
     }

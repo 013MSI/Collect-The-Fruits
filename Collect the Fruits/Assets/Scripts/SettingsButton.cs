@@ -15,42 +15,44 @@ public class SettingsButton : MonoBehaviour
     // }
 
 
-    private bool isPaused = false;
+    //private bool isPaused = false;
 
     void Start()
     {
         // Initially, the game is not paused
-        isPaused = false;
+        //isPaused = false;
         Time.timeScale = 1f;
     }
 
     public void TogglePause()
     {
-        if (!isPaused)
-        {
+        //if (!isPaused)
+        //{
             PauseGame();
-        }
-        else
-        {
-           ResumeGame();
-        }
+       // }
+        //else
+        //{
+           //ResumeGame();
+        //}
     }
 
     void PauseGame()
     {
-        isPaused = true;
+        //isPaused = true;
         Time.timeScale = 0f;
 
         GameManager.Instance.SetPreviousSceneName(SceneManager.GetActiveScene().name);
+        GameManager.Instance.pausedFromGame = true;
 
+        AudioManager.Instance.SaveClip();
         SceneManager.LoadScene("Settings", LoadSceneMode.Additive);
     }
 
-    public void ResumeGame()
-    {
-        isPaused = false;
-        Time.timeScale = 1f;
+    // public void ResumeGame()
+    // {
+    //     isPaused = false;
+    //     Time.timeScale = 1f;
         
-        SceneManager.UnloadSceneAsync("Settings");
-    }
+    //     SceneManager.UnloadSceneAsync("Settings");
+    // }
 }
